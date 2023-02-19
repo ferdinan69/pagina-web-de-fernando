@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> pagina web de fer</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+	<script src="https://kit.fontawesome.com/619189a01c.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/release/v5.6.3/css/all.css">
+	<link rel="stylesheet" href="https://kit.fontawesome.com/619189a01c.css" crossorigin="anonymous">
+</head>
+<body>
+
+	<div class="content"> 
+		
+		<h1 id="ferxo" class="titulo" > AROMATICCAR</h1>
+
+	</div>
+	
+	<div class="menu-overlay">
+		<div class="block b1"> </div> 
+		<div class="block b2"> </div>
+		<div class="block b3"> </div>
+		<div class="block b4"> </div>
+	</div>
+
+	<div class="strips">
+		<div class="strip one"></div>
+		<div class="strip two"></div>
+		<div class="strip three"></div>
+	</div>
+
+
+	<div class="menu">
+		<ul>
+				<a href="#ferxo" class="enlace1"><li>inicio</li></a>
+				<li><a href="carrito/index.html" class="enlace1">tienda </a></li>
+				<li><a href="web nueva/index.html" class="enlace1">sobre nosotros</a></li>
+				<li><a href="formulario/index.html" class="enlace1">contacto</a></li>
+
+
+		</ul>	
+		
+	</div>
+
+
+	<div class="menu-btn">
+		<i class="fa-solid fa-bars"></i>
+	</div>
+
+	
+
+
+	
+	<script>
+		var t1 = new TimelineMax({paused : true});
+
+		t1.to(".block", 1.2, {
+			width: "25%",
+			ease: Power4.easeInOut
+		});
+
+		t1.staggerFrom(".menu ul li", 0.8, {y: 40, opacity: 0, ease: Power2.easeOut}, 0.2);
+		t1.reverse();
+		$(document).on("click", ".menu-btn", function() {
+			t1.reversed(!t1.reversed());
+			
+		});
+
+	</script>
+
+</body>
+</html>
